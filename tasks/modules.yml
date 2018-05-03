@@ -1,0 +1,4 @@
+---
+
+- name: enable macros module
+  apache2_module: name="macro" state="present"

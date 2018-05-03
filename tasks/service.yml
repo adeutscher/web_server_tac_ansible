@@ -1,0 +1,4 @@
+---
+
+- name: confirm running Apache service
+  service: name="httpd" state="started"

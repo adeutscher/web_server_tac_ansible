@@ -1,0 +1,10 @@
+---
+
+- name: transfer loader for to enable macro module
+  copy: src="etc/httpd/conf.modules.d/05-macros.conf" dest="/etc/httpd/conf.modules.d/"
+
+- name: transfer base macros
+  copy: src="etc/httpd/conf.d/macros_web_server_tac/" dest="/etc/httpd/conf.d/macros_web_server_tac/"
+
+- name: conf.d loader
+  copy: src="etc/httpd/conf.d/01_macros_web_server_tac.conf" dest="/etc/httpd/conf.d/01_macros_web_server_tac.conf"

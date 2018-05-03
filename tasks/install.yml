@@ -1,0 +1,8 @@
+---
+- name: Install Packages (yum, RedHat-based Distribution)
+  when: (ansible_os_family == "RedHat")
+  block:
+    - name: Install HTTPD
+      yum: name={{ item }} state=latest
+      with_items:
+        - httpd
